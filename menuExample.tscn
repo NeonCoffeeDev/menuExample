@@ -1,0 +1,378 @@
+[gd_scene load_steps=12 format=3 uid="uid://42qdg3qor40g"]
+
+[ext_resource type="Script" path="res://menuController.gd" id="1_jcr5c"]
+[ext_resource type="Shader" path="res://menuBG.gdshader" id="1_v6a25"]
+[ext_resource type="Texture2D" uid="uid://boercrjubu8bi" path="res://icon.svg" id="2_h3wps"]
+[ext_resource type="Script" path="res://anicursor.gd" id="4_5taqj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pgdis"]
+shader = ExtResource("1_v6a25")
+
+[sub_resource type="Animation" id="Animation_jccjw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("foregroundFADE:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("textFadeMove:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("textFadeMove:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-356, 14)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cursor:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("option1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("option2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("option3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ysgaw"]
+resource_name = "start_menu"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("foregroundFADE:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.2, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0.580392)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("textFadeMove:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("textFadeMove:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-356, 14), Vector2(18.171, 14)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Button:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cursor:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(-0.3, 4.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("option1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("option2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("option3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 3.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vn4qc"]
+_data = {
+"RESET": SubResource("Animation_jccjw"),
+"start_menu": SubResource("Animation_ysgaw")
+}
+
+[sub_resource type="Animation" id="Animation_xsj1c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vq3j6"]
+resource_name = "cursorAni"
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.6, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.129412, 0.290196, 0.717647, 1), Color(0.615895, 0.0466091, 0.28253, 1), Color(0.0941176, 0.388235, 0.329412, 1), Color(0.435294, 0.00392157, 0.764706, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mu1q7"]
+_data = {
+"RESET": SubResource("Animation_xsj1c"),
+"cursorAni": SubResource("Animation_vq3j6")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("CursorObj", "option1", "option2", "option3")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jcr5c")
+CursorObj = NodePath("cursor")
+option1 = NodePath("option1")
+option2 = NodePath("option2")
+option3 = NodePath("option3")
+
+[node name="blackBG" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
+[node name="shaderBG" type="Sprite2D" parent="Control"]
+material = SubResource("ShaderMaterial_pgdis")
+position = Vector2(555.5, 318.5)
+scale = Vector2(10.7266, 3.97656)
+texture = ExtResource("2_h3wps")
+
+[node name="foregroundFADE" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
+[node name="menuAnimation" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_vn4qc")
+}
+
+[node name="textFadeMove" type="RichTextLabel" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -356.0
+offset_top = 14.0
+offset_right = 3.0
+offset_bottom = 122.0
+text = "HERE IS SOME TEXT, visibility and xPosition were adjusted in animationplayer"
+
+[node name="Button" type="Button" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 369.0
+offset_top = 132.0
+offset_right = 857.0
+offset_bottom = 207.0
+text = "THIS IS THE BUTTON NODE"
+
+[node name="cursor" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 368.0
+offset_top = 233.0
+offset_right = 802.0
+offset_bottom = 309.0
+color = Color(0, 0, 1, 1)
+script = ExtResource("4_5taqj")
+
+[node name="cursorAni" type="AnimationPlayer" parent="Control/cursor"]
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_mu1q7")
+}
+
+[node name="option1" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 416.0
+offset_top = 264.0
+offset_right = 816.0
+offset_bottom = 309.0
+color = Color(0, 0, 0.443137, 0.996078)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/option1"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 8.0
+offset_right = 513.0
+offset_bottom = 48.0
+text = "option 1
+"
+
+[node name="option2" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 416.0
+offset_top = 364.0
+offset_right = 816.0
+offset_bottom = 409.0
+color = Color(0, 0, 0.443137, 0.996078)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/option2"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 8.0
+offset_right = 513.0
+offset_bottom = 48.0
+text = "option 1
+"
+
+[node name="option3" type="ColorRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 416.0
+offset_top = 464.0
+offset_right = 816.0
+offset_bottom = 509.0
+color = Color(0, 0, 0.443137, 0.996078)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/option3"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 8.0
+offset_right = 513.0
+offset_bottom = 48.0
+text = "option 1
+"
